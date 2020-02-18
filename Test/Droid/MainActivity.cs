@@ -20,7 +20,6 @@ namespace ImagePicker.Test.Droid
             image = FindViewById<ImageView>(Resource.Id.myImage);
 
             button.Click += OnButtonPress;
-        
         }
 
         protected override void OnDestroy()

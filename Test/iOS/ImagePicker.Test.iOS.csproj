@@ -95,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -104,10 +103,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
+    <Compile Include="MainViewController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SDK\Scanbot.ImagePicker.iOS\Scanbot.ImagePicker.iOS.csproj">
+      <Project>{67DE1A7D-E361-401F-A29E-FFA57E2E2F98}</Project>
+      <Name>Scanbot.ImagePicker.iOS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\ImagePicker.Test\ImagePicker.Test.projitems" Label="Shared" Condition="Exists('..\ImagePicker.Test\ImagePicker.Test.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
