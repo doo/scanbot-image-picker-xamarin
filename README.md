@@ -28,7 +28,11 @@ ImageSource source = await Scanbot.ImagePicker.Forms.ImagePicker.Instance.Pick()
 DependencyManager.Register();
 ```
 
+### Roadmap
 
+* Format filter: **.jpg**, **.png**, **.pdf** etc.
+* Different sources: **camera**, **external storage directory**, **custom path** etc.
+* Various configuration options such as **min/max size**, **aspect ratio** etc.
 
 ### Contributing
 
