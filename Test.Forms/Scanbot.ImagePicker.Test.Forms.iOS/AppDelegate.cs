@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Scanbot.ImagePicker.Forms.iOS;
+using Scanbot.ImagePicker.Test.Forms.Droid;
 using UIKit;
 
 namespace Scanbot.ImagePicker.Test.Forms.iOS
@@ -24,6 +26,8 @@ namespace Scanbot.ImagePicker.Test.Forms.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+            DependencyManager.Register();
 
             return base.FinishedLaunching(app, options);
         }

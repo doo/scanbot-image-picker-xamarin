@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5DC16CD-FD01-45B5-8619-39471450F6FF}</ProjectGuid>
+    <ProjectGuid>{AF015EB4-C955-45B7-8B97-9EADDB2C79AF}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Scanbot.ImagePicker.Test.Forms.Droid</RootNamespace>
-    <AssemblyName>Scanbot.ImagePicker.Test.Forms.Droid</AssemblyName>
+    <AssemblyName>Scanbot.ImagePicker.Test.Forms.Droid.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -54,6 +54,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -86,15 +89,15 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
-  <Import Project="..\Scanbot.ImagePicker.Test.Forms\Scanbot.ImagePicker.Test.Forms.projitems" Label="Shared" Condition="Exists('..\Scanbot.ImagePicker.Test.Forms\Scanbot.ImagePicker.Test.Forms.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\Scanbot.ImagePicker.Test.Forms\Scanbot.ImagePicker.Test.Forms.csproj">
+      <Project>{87F37852-6F6A-4A59-AD8D-6E77FDE638CB}</Project>
+      <Name>Scanbot.ImagePicker.Test.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms.Droid.csproj">
+      <Project>{19F05575-B877-49C6-9299-6E8BA03B3F58}</Project>
+      <Name>Scanbot.ImagePicker.Forms.Droid</Name>
+    </ProjectReference>
+  </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
- <ProjectExtensions>
-   <MonoDevelop>
-     <Properties>
-       <Policies>
-         <DotNetNamingPolicy DirectoryNamespaceAssociation="None" ResourceNamePolicy="FileFormatDefault" />
-       </Policies>
-     </Properties>
-   </MonoDevelop>
- </ProjectExtensions>
 </Project>

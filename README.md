@@ -18,7 +18,23 @@ UIImage image = await Scanbot.ImagePicker.iOS.ImagePicker.Instance.Pick();
 
 ##### Forms
 
+```c#
+ImageSource source = await Scanbot.ImagePicker.Forms.ImagePicker.Instance.Pick();
+```
+
+**Quirk**: Depending on your target framework and Xamarin.Forms version, this may throw a `NullReferenceException`. That means native dependcendies weren't properly referenced. In that case, add the following to your `AppDelegate` and `MainActivity`:
+
+```c#
+DependencyManager.Register();
+```
 
 
 
+### Contributing
+
+Contributions in the form of **issues**, **pull requests** and **suggestions** are very welcome. 
+
+### Disclaimer
+
+This package is still in beta and should be used with that in mind. It has not been thorougly tested, all use cases are definitely not covered, breaking changes without much notice will happen.
 

@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Scanbot.ImagePicker.Test.Forms
+namespace Scanbot.ImagePicker.Test.Forms.Droid
 {
     public partial class App : Application
     {
