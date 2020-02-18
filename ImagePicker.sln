@@ -19,11 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.iOS", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK.Forms", "SDK.Forms", "{C774F777-75A3-47F2-AE79-B06AA703FA1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.Forms.Droid", "SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms.Droid.csproj", "{19F05575-B877-49C6-9299-6E8BA03B3F58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.Forms.Droid", "SDK.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms.Droid.csproj", "{19F05575-B877-49C6-9299-6E8BA03B3F58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.Forms", "SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj", "{6C336D09-3258-4D89-BF3C-2C41666F6E3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.Forms", "SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj", "{6C336D09-3258-4D89-BF3C-2C41666F6E3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.Forms.iOS", "SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms.iOS\Scanbot.ImagePicker.Forms.iOS.csproj", "{B7229ACC-5B0D-4EA4-AF2E-6D93CE9CBF40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanbot.ImagePicker.Forms.iOS", "SDK.Forms\Scanbot.ImagePicker.Forms.iOS\Scanbot.ImagePicker.Forms.iOS.csproj", "{B7229ACC-5B0D-4EA4-AF2E-6D93CE9CBF40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test.Forms", "Test.Forms", "{997C0A6C-1789-40D2-B102-FD4AAF7A9546}"
 EndProject

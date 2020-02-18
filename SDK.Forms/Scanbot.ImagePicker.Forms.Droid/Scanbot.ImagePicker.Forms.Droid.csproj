@@ -64,11 +64,11 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SDK\Scanbot.ImagePicker.Droid\Scanbot.ImagePicker.Droid.csproj">
+    <ProjectReference Include="..\..\SDK\Scanbot.ImagePicker.Droid\Scanbot.ImagePicker.Droid.csproj">
       <Project>{4370780C-B6B6-4D30-AD83-4E928ACE6CAA}</Project>
       <Name>Scanbot.ImagePicker.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj">
+    <ProjectReference Include="..\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj">
       <Project>{6C336D09-3258-4D89-BF3C-2C41666F6E3B}</Project>
       <Name>Scanbot.ImagePicker.Forms</Name>
     </ProjectReference>

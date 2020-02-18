@@ -50,7 +50,7 @@
       <Project>{6C336D09-3258-4D89-BF3C-2C41666F6E3B}</Project>
       <Name>Scanbot.ImagePicker.Forms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\SDK\Scanbot.ImagePicker.iOS\Scanbot.ImagePicker.iOS.csproj">
+    <ProjectReference Include="..\..\SDK\Scanbot.ImagePicker.iOS\Scanbot.ImagePicker.iOS.csproj">
       <Project>{67DE1A7D-E361-401F-A29E-FFA57E2E2F98}</Project>
       <Name>Scanbot.ImagePicker.iOS</Name>
     </ProjectReference>
