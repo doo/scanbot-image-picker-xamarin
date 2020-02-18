@@ -3,7 +3,7 @@
 
   <metadata>
     <id>Scanbot.ImagePicker</id>
-    <version>0.0.1-preview1</version>
+    <version>0.0.1-preview3</version>
     <authors>Scanbot</authors>
     <owners>Scanbot</owners>
     <projectUrl>https://scanbot.io/sdk</projectUrl>
@@ -16,7 +16,7 @@
 
   <files>
     <file src="../SDK/Scanbot.ImagePicker.Droid/bin/Release/Scanbot.ImagePicker.Droid.dll" target="lib/MonoAndroid81" />
-    <file src="../SDK/Scanbot.ImagePicker.iOS/bin/Release/Scanbot.ImagePicker.iOS.dll" target="lib/MonoAndroid81" />
+    <file src="../SDK/Scanbot.ImagePicker.iOS/bin/Release/Scanbot.ImagePicker.iOS.dll" target="lib/Xamarin.iOS10" />
   </files>
 
 </package>
