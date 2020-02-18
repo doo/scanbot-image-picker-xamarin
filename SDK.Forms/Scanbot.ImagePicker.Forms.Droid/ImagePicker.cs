@@ -9,10 +9,8 @@ namespace Scanbot.ImagePicker.Forms.Droid
     {
         public async Task<ImageSource> Pick()
         {
-            var bitmap = await Scanbot.ImagePicker.Droid.ImagePicker.Instance.Pick();
-            // TODO Do not use native implementation of Stream -> Bitmap here,
-            // as Bitmap -> Imagesource conversion is super ineffective
-            return bitmap.ToImageSource();
+            var stream = await Scanbot.ImagePicker.Droid.ImagePicker.Instance.GetResultStream();
+            return stream.ToImageSource();
         }
     }
 }

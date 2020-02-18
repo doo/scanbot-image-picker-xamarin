@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
@@ -13,6 +14,17 @@ namespace Scanbot.ImagePicker.Droid
 
         public async Task<Bitmap> Pick()
         {
+            var stream = await GetResultStream();
+            if (stream == null)
+            {
+                return null;
+            }
+
+            return BitmapFactory.DecodeStream(stream);
+        }
+
+        public async Task<Stream> GetResultStream()
+        {
             // Define the Intent for getting images
             Intent intent = new Intent();
             intent.SetType("image/*");
@@ -24,8 +36,7 @@ namespace Scanbot.ImagePicker.Droid
             if (result.Result == Result.Ok && result.Intent != null)
             {
                 var uri = result.Intent.Data;
-                var stream = Platform.Context.ContentResolver.OpenInputStream(uri);
-                return BitmapFactory.DecodeStream(stream);
+                return Platform.Context.ContentResolver.OpenInputStream(uri);
             }
 
             return null;

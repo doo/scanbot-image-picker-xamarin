@@ -33,6 +33,7 @@ DependencyManager.Register();
 * Format filter: **.jpg**, **.png**, **.pdf** etc.
 * Different sources: **camera**, **external storage directory**, **custom path** etc.
 * Various configuration options such as **min/max size**, **aspect ratio** etc.
+* Improved errorhandling (not just returning `null` when something goes wrong, heh)
 
 ### Contributing
 

@@ -22,6 +22,14 @@ namespace Scanbot.ImagePicker.Forms.Droid
                 return new MemoryStream(bytes, writable: false);
             });
         }
-
+        public static ImageSource ToImageSource(this Stream stream)
+        {
+            if (stream == null)
+            {
+                return null;
+            }
+        
+            return ImageSource.FromStream(() => stream );
+        }
     }
 }
