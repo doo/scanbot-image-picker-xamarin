@@ -22,10 +22,14 @@ UIImage image = await Scanbot.ImagePicker.iOS.ImagePicker.Instance.Pick();
 ImageSource source = await Scanbot.ImagePicker.Forms.ImagePicker.Instance.Pick();
 ```
 
-**Quirk**: Depending on your target framework and Xamarin.Forms version, this may throw a `NullReferenceException`. That means native dependcendies weren't properly referenced. In that case, add the following to your `AppDelegate` and `MainActivity`:
+**Quirk**: Depending on your target framework and Xamarin.Forms version, this may throw a `NullReferenceException`. That means native dependcendies weren't properly referenced. In that case, add the following to your `AppDelegate` and `MainActivity`, respectively:
 
 ```c#
-DependencyManager.Register();
+Scanbot.ImagePicker.Forms.Droid.DependencyManager.Register();
+```
+
+```C#
+Scanbot.ImagePicker.Forms.iOS.DependencyManager.Register();
 ```
 
 ### Roadmap
