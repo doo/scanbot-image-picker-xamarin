@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using System;
+using Android.Graphics;
 
 namespace ImagePicker.Test.Droid
 {
@@ -30,7 +31,7 @@ namespace ImagePicker.Test.Droid
 
         async void OnButtonPress(object sender, EventArgs e)
         {
-            var bitmap = await Scanbot.ImagePicker.Droid.ImagePicker.Instance.Pick();
+            Bitmap bitmap = await Scanbot.ImagePicker.Droid.ImagePicker.Instance.Pick();
             image.SetImageBitmap(bitmap);
         }
     }

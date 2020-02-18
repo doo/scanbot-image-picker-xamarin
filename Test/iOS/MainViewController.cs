@@ -19,7 +19,7 @@ namespace ImagePicker.Test.iOS
 
             ContentView.Button.TouchUpInside += async delegate
             {
-                var image = await Scanbot.ImagePicker.iOS.ImagePicker.Instance.Pick();
+                UIImage image = await Scanbot.ImagePicker.iOS.ImagePicker.Instance.Pick();
                 ContentView.Image.Image = image;
             };
         }
@@ -33,8 +33,6 @@ namespace ImagePicker.Test.iOS
 
         public MainView()
         {
-            //BackgroundColor = UIColor.White;
-
             Button = new UIButton();
             Button.SetTitle("PICK IMAGE", UIControlState.Normal);
             Button.Layer.BorderColor = UIColor.LightGray.CGColor;
