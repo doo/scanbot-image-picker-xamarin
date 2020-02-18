@@ -81,4 +81,4 @@ gradle/
 gradlew
 gradlew.bat
 
-ScanbotBarcodeScannerSDK.framework/
+dist/

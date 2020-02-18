@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+
+  <metadata>
+    <id>Scanbot.ImagePicker</id>
+    <version>0.0.1-preview1</version>
+    <authors>Scanbot</authors>
+    <owners>Scanbot</owners>
+    <projectUrl>https://scanbot.io/sdk</projectUrl>
+    <iconUrl>https://scanbot.io/icon-sdk.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A tool to simplify and unify image picking from from the gallery. No more discrepancies between platforms, no more OnActivityResult, resultCode, FinishedPickingMedia. No messing with permissions, no launching controllers or starting activities – Pick &amp; Go! </description>
+    <copyright>Copyright 2020 doo GmbH</copyright>
+    <tags>Scanbot Image ImagePicker</tags>
+  </metadata>
+
+  <files>
+    <file src="../SDK/Scanbot.ImagePicker.Droid/bin/Release/Scanbot.ImagePicker.Droid.dll" target="lib/MonoAndroid81" />
+    <file src="../SDK/Scanbot.ImagePicker.iOS/bin/Release/Scanbot.ImagePicker.iOS.dll" target="lib/MonoAndroid81" />
+  </files>
+
+</package>

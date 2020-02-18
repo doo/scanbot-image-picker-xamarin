@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Scanbot.ImagePicker.Forms</id>
+    <version>0.0.1-preview1</version>
+    <authors>Scanbot</authors>
+    <owners>Scanbot</owners>
+    <projectUrl>https://scanbot.io/sdk</projectUrl>
+    <iconUrl>https://scanbot.io/icon-sdk.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A tool to simplify and unify image picking from from the gallery. No more discrepancies between platforms, no more OnActivityResult, resultCode, FinishedPickingMedia. No messing with permissions, no launching controllers or starting activities – Pick &amp; Go!</description>
+    <copyright>Copyright 2020 doo GmbH</copyright>
+    <tags>Scanbot Image ImagePicker</tags>
+    <dependencies>
+      <group>
+        <dependency id="Scanbot.ImagePicker" version="0.0.1-preview1" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="../SDK.Forms/Scanbot.ImagePicker.Forms/bin/Release/netstandard2.1/Scanbot.ImagePicker.Forms.dll" target="lib/netstandard2.1" />
+    <file src="../SDK.Forms/Scanbot.ImagePicker.Forms/bin/Release/netstandard2.1/Scanbot.ImagePicker.Forms.dll" target="lib/MonoAndroid81" />
+    <file src="../SDK.Forms/Scanbot.ImagePicker.Forms/bin/Release/netstandard2.1/Scanbot.ImagePicker.Forms.dll" target="lib/Xamarin.iOS10" />
+
+    <file src="../SDK.Forms/Scanbot.ImagePicker.Forms.Droid/bin/Release/Scanbot.ImagePicker.Forms.Droid.dll" target="lib/MonoAndroid81" />
+    <file src="../SDK.Forms/Scanbot.ImagePicker.Forms.iOS/bin/Release/Scanbot.ImagePicker.Forms.iOS.dll" target="lib/MonoAndroid81" />
+  </files>
+
+</package>

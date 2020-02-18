@@ -1,6 +1,6 @@
 ## Scanbot Image Picker for Xamarin Native & Forms
 
-A tool to simplify and unify image picking from from the gallery. No more discrepencies between platforms, no more `OnActivityResult`,  `resultCode`,  `FinishedPickingMedia`. No messing with permissions, no launching controllers or starting activities – **Pick & Go**. 
+A tool to simplify and unify image picking from from the gallery. No more discrepancies between platforms, no more `OnActivityResult`,  `resultCode`,  `FinishedPickingMedia`. No messing with permissions, no launching controllers or starting activities – **Pick & Go**. 
 
 ### Usage
 
@@ -42,4 +42,8 @@ Contributions in the form of **issues**, **pull requests** and **suggestions** a
 ### Disclaimer
 
 This package is still in beta and should be used with that in mind. It is volatile. It has not been thorougly tested, all use cases are definitely not covered, breaking changes will happen without much notice.
+
+### License
+
+[MIT](LICENSE.md)
 
