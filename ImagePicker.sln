@@ -1,11 +1,13 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ImagePicker", "ImagePicker\ImagePicker.shproj", "{F0AD8C0C-E888-48B6-91A2-058947B5B459}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ImagePicker", "SDK\ImagePicker\ImagePicker.shproj", "{F0AD8C0C-E888-48B6-91A2-058947B5B459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagePicker.Droid", "Droid\ImagePicker.Droid.csproj", "{ACA76D13-EF23-49FC-A5A4-35F18A1E594A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagePicker.Droid", "SDK\Droid\ImagePicker.Droid.csproj", "{ACA76D13-EF23-49FC-A5A4-35F18A1E594A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagePicker.iOS", "iOS\ImagePicker.iOS.csproj", "{6877B905-1346-45E7-B272-450B82E8B733}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagePicker.iOS", "SDK\iOS\ImagePicker.iOS.csproj", "{6877B905-1346-45E7-B272-450B82E8B733}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{79A2E952-0007-45DF-AEF1-FD1D04004D41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,5 +43,10 @@ Global
 		{6877B905-1346-45E7-B272-450B82E8B733}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{6877B905-1346-45E7-B272-450B82E8B733}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{6877B905-1346-45E7-B272-450B82E8B733}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0AD8C0C-E888-48B6-91A2-058947B5B459} = {79A2E952-0007-45DF-AEF1-FD1D04004D41}
+		{ACA76D13-EF23-49FC-A5A4-35F18A1E594A} = {79A2E952-0007-45DF-AEF1-FD1D04004D41}
+		{6877B905-1346-45E7-B272-450B82E8B733} = {79A2E952-0007-45DF-AEF1-FD1D04004D41}
 	EndGlobalSection
 EndGlobal
