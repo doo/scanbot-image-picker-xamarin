@@ -15,6 +15,6 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj" />
+    <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj" />
   </ItemGroup>
 </Project>

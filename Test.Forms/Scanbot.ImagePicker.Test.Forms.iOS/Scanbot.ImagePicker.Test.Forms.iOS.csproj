@@ -130,7 +130,7 @@
       <Project>{87F37852-6F6A-4A59-AD8D-6E77FDE638CB}</Project>
       <Name>Scanbot.ImagePicker.Test.Forms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms.iOS\Scanbot.ImagePicker.Forms.iOS.csproj">
+    <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms.iOS\Scanbot.ImagePicker.Forms.iOS.csproj">
       <Project>{B7229ACC-5B0D-4EA4-AF2E-6D93CE9CBF40}</Project>
       <Name>Scanbot.ImagePicker.Forms.iOS</Name>
     </ProjectReference>
