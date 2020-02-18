@@ -26,8 +26,6 @@ namespace ImagePicker.Test.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Scanbot.ImagePicker.Droid.Resource.String.app_name = global::ImagePicker.Test.Droid.Resource.String.app_name;
-			global::Scanbot.ImagePicker.Droid.Resource.String.hello = global::ImagePicker.Test.Droid.Resource.String.hello;
 		}
 		
 		public partial class Attribute
