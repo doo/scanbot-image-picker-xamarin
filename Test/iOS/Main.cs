@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Scanbot.ImagePicker.iOS
+namespace ImagePicker.Test.iOS
 {
     public class Application
     {

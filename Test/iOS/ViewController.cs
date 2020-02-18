@@ -2,7 +2,7 @@
 
 using UIKit;
 
-namespace Scanbot.ImagePicker.iOS
+namespace ImagePicker.Test.iOS
 {
     public partial class ViewController : UIViewController
     {

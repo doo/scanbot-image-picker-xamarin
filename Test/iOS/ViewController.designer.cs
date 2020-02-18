@@ -5,7 +5,7 @@
 //		
 using Foundation;
 
-namespace Scanbot.ImagePicker.iOS
+namespace ImagePicker.Test.iOS
 {
     [Register("ViewController")]
     partial class ViewController
