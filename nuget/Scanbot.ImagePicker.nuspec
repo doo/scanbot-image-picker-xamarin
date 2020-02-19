@@ -2,8 +2,8 @@
 <package>
 
   <metadata>
-    <id>Scanbot.ImagePicker</id>
-    <version>0.0.1-preview3</version>
+    <id>Scanbot.Xamarin.ImagePicker</id>
+    <version>0.0.1-rc1</version>
     <authors>Scanbot</authors>
     <owners>Scanbot</owners>
     <projectUrl>https://github.com/doo/scanbot-image-picker-xamarin</projectUrl>
