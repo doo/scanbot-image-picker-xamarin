@@ -13,7 +13,7 @@
     <tags>Scanbot Image ImagePicker</tags>
     <dependencies>
       <group>
-        <dependency id="Scanbot.ImagePicker" version="0.0.1-preview1" />
+        <dependency id="Scanbot.ImagePicker" version="0.0.1-preview3" />
       </group>
     </dependencies>
   </metadata>
