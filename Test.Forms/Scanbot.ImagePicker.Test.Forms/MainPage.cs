@@ -1,4 +1,5 @@
 ﻿using System;
+using ScanbotBarcodeSDK.Forms;
 using Xamarin.Forms;
 
 namespace Scanbot.ImagePicker.Test.Forms
@@ -33,7 +34,11 @@ namespace Scanbot.ImagePicker.Test.Forms
         {
             ImageSource source = await Scanbot.ImagePicker.Forms.ImagePicker.Instance.Pick();
 
+            SBSDK.Initialize(new InitializationOptions());
+            var codes = await SBSDK.Operations.DetectBarcodesFrom(source);
             Image.Source = source;
+
+
         }
     }
 }
