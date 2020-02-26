@@ -12,6 +12,7 @@
     <copyright>Copyright 2020 doo GmbH</copyright>
     <tags>Scanbot Image ImagePicker Xamarin.Forms Android iOS</tags>
     <icon>images/icon.png</icon>
+    <iconUrl>https://raw.githubusercontent.com/doo/scanbot-image-picker-xamarin/master/nuget/assets/icon.png</iconUrl>
     <dependencies>
       <group>
         <dependency id="Scanbot.Xamarin.ImagePicker" version="0.0.1-rc3" />
