@@ -2,6 +2,8 @@
 
 A tool to simplify and unify image picking from from the gallery. No more discrepancies between platforms, no more `OnActivityResult`,  `resultCode`,  `FinishedPickingMedia`. No messing with permissions, no launching controllers or starting activities – **Pick & Go**. 
 
+Available as nuget packages for [Xamarin](https://www.nuget.org/packages/Scanbot.Xamarin.ImagePicker/) and [Xamarin.Forms](https://www.nuget.org/packages/Scanbot.Xamarin.Forms.ImagePicker/)
+
 ### Usage
 
 #### Droid
