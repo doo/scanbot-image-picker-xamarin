@@ -17,12 +17,8 @@ namespace Scanbot.ImagePicker.iOS
         public Task<UIImage> Pick()
         {
             // Create and define UIImagePickerController
-            picker = new UIImagePickerController
-            {
-                SourceType = UIImagePickerControllerSourceType.PhotoLibrary,
-                MediaTypes = UIImagePickerController.AvailableMediaTypes(UIImagePickerControllerSourceType.PhotoLibrary)
-            };
-
+            picker = new UIImagePickerController();
+            
             // Set event handlers
             picker.FinishedPickingMedia += OnImagePickerFinishedPickingMedia;
             picker.Canceled += OnImagePickerCancelled;
