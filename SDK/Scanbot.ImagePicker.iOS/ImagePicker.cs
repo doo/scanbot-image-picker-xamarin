@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using UIKit;
 
@@ -18,7 +15,7 @@ namespace Scanbot.ImagePicker.iOS
         {
             // Create and define UIImagePickerController
             picker = new UIImagePickerController();
-            
+
             // Set event handlers
             picker.FinishedPickingMedia += OnImagePickerFinishedPickingMedia;
             picker.Canceled += OnImagePickerCancelled;
@@ -31,6 +28,13 @@ namespace Scanbot.ImagePicker.iOS
             // Return Task object
             source = new TaskCompletionSource<UIImage>();
             return source.Task;
+        }
+
+        public Task ForceClose() {
+            if (picker == null) {
+                return Task.CompletedTask;
+            }
+            return picker.DismissViewControllerAsync(true);
         }
 
         void OnImagePickerFinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs args)

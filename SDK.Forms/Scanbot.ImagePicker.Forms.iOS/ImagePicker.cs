@@ -11,5 +11,10 @@ namespace Scanbot.ImagePicker.Forms.iOS
             var image = await Scanbot.ImagePicker.iOS.ImagePicker.Instance.Pick();
             return image.ToImageSource();
         }
+
+        public Task ForceClose()
+        {
+            return Scanbot.ImagePicker.iOS.ImagePicker.Instance.ForceClose();
+        }
     }
 }

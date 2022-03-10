@@ -12,5 +12,10 @@ namespace Scanbot.ImagePicker.Forms.Droid
             var stream = await Scanbot.ImagePicker.Droid.ImagePicker.Instance.GetResultStream();
             return stream.ToImageSource();
         }
+
+        Task IImagePicker.ForceClose()
+        {
+            return Task.CompletedTask;
+        }
     }
 }

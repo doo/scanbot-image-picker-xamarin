@@ -3,13 +3,13 @@
 
   <metadata>
     <id>Scanbot.Xamarin.ImagePicker</id>
-    <version>0.0.1-rc6</version>
+    <version>0.0.1-rc7</version>
     <authors>Scanbot</authors>
     <owners>Scanbot</owners>
     <projectUrl>https://github.com/doo/scanbot-image-picker-xamarin</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A tool to simplify and unify image picking from the gallery for Android and iOS. No more discrepancies between platforms, no more OnActivityResult, resultCode, FinishedPickingMedia. No messing with permissions, no launching controllers or starting activities – Pick &amp; Go! </description>
-    <copyright>Copyright 2020 doo GmbH</copyright>
+    <copyright>Copyright 2022 doo GmbH</copyright>
     <tags>Scanbot Image ImagePicker Xamarin Android iOS</tags>
     <icon>images/icon.png</icon>
     <license type="file">LICENSE.md</license>
