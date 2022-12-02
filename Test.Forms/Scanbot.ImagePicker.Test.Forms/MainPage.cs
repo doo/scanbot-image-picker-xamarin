@@ -6,7 +6,7 @@ namespace Scanbot.ImagePicker.Test.Forms
 {
     public class MainPage : ContentPage
     {
-        StackLayout Container { get; set; }
+        Grid GridViewContainer { get; set; }
 
         Button Button { get; set; }
 
@@ -14,18 +14,33 @@ namespace Scanbot.ImagePicker.Test.Forms
 
         public MainPage()
         {
-            Container = new StackLayout
+            GridViewContainer = new Grid
             {
-                Orientation = StackOrientation.Vertical
+                BackgroundColor = Color.SkyBlue,
+                RowDefinitions = new RowDefinitionCollection
+                {
+                    new RowDefinition { Height = new GridLength(3, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star) },
+                }
             };
+
+
 
             Button = new Button();
             Button.Text = "PICK IMAGE";
-            Container.Children.Add(Button);
+            Button.TextColor = Color.Red;
+            Button.BackgroundColor = Color.Snow;
+            Button.VerticalOptions = LayoutOptions.Center;
+            Button.HorizontalOptions = LayoutOptions.Center;
+            GridViewContainer.Children.Add(Button, 0, 1);
 
             Image = new Image();
-            Container.Children.Add(Image);
-            Content = Container;
+            Image.VerticalOptions = LayoutOptions.CenterAndExpand;
+            Image.HorizontalOptions = LayoutOptions.CenterAndExpand;
+            GridViewContainer.Children.Add(Image, 0, 0);
+
+
+            Content = GridViewContainer;
 
             Button.Clicked += OnButtonClick;
         }
@@ -34,8 +49,8 @@ namespace Scanbot.ImagePicker.Test.Forms
         {
             ImageSource source = await Scanbot.ImagePicker.Forms.ImagePicker.Instance.Pick();
 
-            SBSDK.Initialize(new InitializationOptions());
-            var codes = await SBSDK.Operations.DetectBarcodesFrom(source);
+            //SBSDK.Initialize(new InitializationOptions());
+            //var codes = await SBSDK.Operations.DetectBarcodesFrom(source);
             Image.Source = source;
 
 
