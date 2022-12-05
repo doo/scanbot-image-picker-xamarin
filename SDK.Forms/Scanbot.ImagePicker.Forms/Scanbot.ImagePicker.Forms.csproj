@@ -8,6 +8,6 @@
     <DocumentationFile>bin\Debug\netstandard2.1\Scanbot.ImagePicker.Forms.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
   </ItemGroup>
 </Project>
