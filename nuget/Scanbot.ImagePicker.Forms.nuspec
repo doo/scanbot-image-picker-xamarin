@@ -3,7 +3,7 @@
 
   <metadata>
     <id>Scanbot.Xamarin.Forms.ImagePicker</id>
-    <version>0.0.2-beta1</version>
+    <version>0.0.2</version>
     <authors>Scanbot</authors>
     <owners>Scanbot</owners>
     <projectUrl>https://github.com/doo/scanbot-image-picker-xamarin</projectUrl>
@@ -15,7 +15,7 @@
     <license type="file">LICENSE.md</license>
     <dependencies>
       <group>
-        <dependency id="Scanbot.Xamarin.ImagePicker" version="0.0.2-beta1" />
+        <dependency id="Scanbot.Xamarin.ImagePicker" version="0.0.2" />
       </group>
     </dependencies>
   </metadata>
