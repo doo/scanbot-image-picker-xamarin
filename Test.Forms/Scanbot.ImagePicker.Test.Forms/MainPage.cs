@@ -1,12 +1,11 @@
 ﻿using System;
-using ScanbotBarcodeSDK.Forms;
 using Xamarin.Forms;
 
 namespace Scanbot.ImagePicker.Test.Forms
 {
     public class MainPage : ContentPage
     {
-        StackLayout Container { get; set; }
+        Grid GridViewContainer { get; set; }
 
         Button Button { get; set; }
 
@@ -14,31 +13,47 @@ namespace Scanbot.ImagePicker.Test.Forms
 
         public MainPage()
         {
-            Container = new StackLayout
+            GridViewContainer = new Grid
             {
-                Orientation = StackOrientation.Vertical
+                RowDefinitions = new RowDefinitionCollection
+                {
+                    new RowDefinition { Height = new GridLength(85, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(15, GridUnitType.Star) },
+                },
+                Margin = new Thickness(10, 45, 10, 30)
             };
 
             Button = new Button();
+            Button.BorderColor = Color.Gray;
+            Button.BorderWidth = 2;
+            Button.TextColor = Color.Gray;
             Button.Text = "PICK IMAGE";
-            Container.Children.Add(Button);
+            Button.Padding = new Thickness(10);
+            Button.BackgroundColor = Color.Snow;
+            Button.VerticalOptions = LayoutOptions.Center;
+            Button.HorizontalOptions = LayoutOptions.Center;
+            GridViewContainer.Children.Add(Button, 0, 1);
 
             Image = new Image();
-            Container.Children.Add(Image);
-            Content = Container;
+            Image.VerticalOptions = LayoutOptions.CenterAndExpand;
+            Image.HorizontalOptions = LayoutOptions.CenterAndExpand;
+            GridViewContainer.Children.Add(Image, 0, 0);
+
+
+            Content = GridViewContainer;
 
             Button.Clicked += OnButtonClick;
         }
 
+        /// <summary>
+        /// Show result on the screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         async void OnButtonClick(object sender, EventArgs e)
         {
             ImageSource source = await Scanbot.ImagePicker.Forms.ImagePicker.Instance.Pick();
-
-            SBSDK.Initialize(new InitializationOptions());
-            var codes = await SBSDK.Operations.DetectBarcodesFrom(source);
             Image.Source = source;
-
-
         }
     }
 }

@@ -3,7 +3,7 @@
 
   <metadata>
     <id>Scanbot.Xamarin.ImagePicker</id>
-    <version>0.0.1-rc6</version>
+    <version>0.0.2-beta1</version>
     <authors>Scanbot</authors>
     <owners>Scanbot</owners>
     <projectUrl>https://github.com/doo/scanbot-image-picker-xamarin</projectUrl>

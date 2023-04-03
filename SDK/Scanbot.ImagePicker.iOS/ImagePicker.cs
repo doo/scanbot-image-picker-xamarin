@@ -26,7 +26,7 @@ namespace Scanbot.ImagePicker.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(picker, true);
+            viewController.PresentViewController(picker, true, null);
 
             // Return Task object
             source = new TaskCompletionSource<UIImage>();
@@ -37,21 +37,26 @@ namespace Scanbot.ImagePicker.iOS
         {
             UIImage image = args.EditedImage ?? args.OriginalImage;
 
-            if (image != null)
+            picker.DismissViewController(true, () =>
             {
-                source.SetResult(image);
-            }
-            else
-            {
-                source.SetResult(null);
-            }
-            picker.DismissModalViewController(true);
+                Task.Run(() =>
+                {
+                    if (image != null)
+                    {
+                        source.SetResult(image);
+                    }
+                    else
+                    {
+                        source.SetResult(null);
+                    }
+                });
+            });
         }
 
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
             source.SetResult(null);
-            picker.DismissModalViewController(true);
+            picker.DismissViewController(true, null);
         }
         public void Dispose()
         {

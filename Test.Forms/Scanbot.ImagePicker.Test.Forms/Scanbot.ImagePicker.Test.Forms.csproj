@@ -11,9 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
-    <PackageReference Include="ScanbotBarcodeSDK.Xamarin.Forms" Version="1.0.0-rc2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms\Scanbot.ImagePicker.Forms.csproj" />
