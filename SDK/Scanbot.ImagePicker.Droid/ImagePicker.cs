@@ -1,18 +1,14 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Graphics;
 using Scanbot.ImagePicker.Droid.Utils;
 
 namespace Scanbot.ImagePicker.Droid
 {
-    public class ImagePicker : IDisposable
+    public class ImagePicker
     {
         public static readonly ImagePicker Instance = new ImagePicker();
 
-        public async Task<Bitmap> Pick()
+        public async Task<Bitmap> PickImageAsync()
         {
             var stream = await GetResultStream();
             if (stream == null)
@@ -41,11 +37,5 @@ namespace Scanbot.ImagePicker.Droid
 
             return null;
         }
-
-        public void Dispose()
-        {
-            // TODO destroy any cached data it may contain
-        }
-
     }
 }

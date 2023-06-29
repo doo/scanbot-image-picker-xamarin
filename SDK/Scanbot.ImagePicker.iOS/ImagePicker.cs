@@ -1,32 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UIKit;
-
+﻿using System.Globalization;
+using PhotosUI;
+#pragma warning disable CA1416 // Validate platform compatibility
 namespace Scanbot.ImagePicker.iOS
 {
-    public class ImagePicker : IDisposable
+    public class ImagePicker : Foundation.NSObject, IPHPickerViewControllerDelegate
     {
         public static readonly ImagePicker Instance = new ImagePicker();
 
         TaskCompletionSource<UIImage> source;
-        UIImagePickerController picker;
+        UIImagePickerController imagePickerViewController;
+        PHPickerViewController phPickerViewController;
 
-        public Task<UIImage> Pick()
+        public UIViewController RootViewController => UIApplication.SharedApplication.KeyWindow.RootViewController;
+
+        //-----------------------------------------
+        // Pick Images Async
+        //-----------------------------------------
+        public async Task<UIImage> PickImageAsync()
+        {
+            var systemVersion = Convert.ToDouble(UIDevice.CurrentDevice.SystemVersion, CultureInfo.InvariantCulture);
+            if (systemVersion >= 14.0)
+            {
+                return await PickImageNew();
+            }
+            else
+            {
+                return await PickImageOld();
+            }
+        }
+
+        #region Image Picker View Controller
+
+        /// <summary>
+        /// Method used below iOS 14
+        /// </summary>
+        /// <returns></returns>
+        internal Task<UIImage> PickImageOld()
         {
             // Create and define UIImagePickerController
-            picker = new UIImagePickerController();
-            
+            imagePickerViewController = new UIImagePickerController();
+
+            imagePickerViewController.SourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+
             // Set event handlers
-            picker.FinishedPickingMedia += OnImagePickerFinishedPickingMedia;
-            picker.Canceled += OnImagePickerCancelled;
+            imagePickerViewController.FinishedPickingMedia += OnImagePickerFinishedPickingMedia;
+            imagePickerViewController.Canceled += OnImagePickerCancelled;
 
             // Present UIImagePickerController;
-            UIWindow window = UIApplication.SharedApplication.KeyWindow;
-            var viewController = window.RootViewController;
-            viewController.PresentViewController(picker, true, null);
+           
+            RootViewController.PresentViewController(imagePickerViewController, true, null);
 
             // Return Task object
             source = new TaskCompletionSource<UIImage>();
@@ -37,7 +59,7 @@ namespace Scanbot.ImagePicker.iOS
         {
             UIImage image = args.EditedImage ?? args.OriginalImage;
 
-            picker.DismissViewController(true, () =>
+            imagePickerViewController.DismissViewController(true, () =>
             {
                 Task.Run(() =>
                 {
@@ -56,11 +78,48 @@ namespace Scanbot.ImagePicker.iOS
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
             source.SetResult(null);
-            picker.DismissViewController(true, null);
+            imagePickerViewController.DismissViewController(true, null);
         }
-        public void Dispose()
+
+        #endregion
+
+        #region 
+
+        internal Task<UIImage> PickImageNew()
         {
-            // TODO destroy any cached data it may contain
+
+            var config = new PHPickerConfiguration();
+            config.SelectionLimit = 1;
+            config.Filter = PHPickerFilter.ImagesFilter;
+            config.Selection = PHPickerConfigurationSelection.Default;
+            phPickerViewController = new PHPickerViewController(config);
+            phPickerViewController.Delegate = this;
+            source = new TaskCompletionSource<UIImage>();
+            RootViewController.PresentViewController(phPickerViewController, true, null);
+            return source.Task;
         }
+
+        void IPHPickerViewControllerDelegate.DidFinishPicking(PhotosUI.PHPickerViewController picker, PhotosUI.PHPickerResult[] results)
+        {
+            picker.DismissViewController(true, null);
+            foreach (var result in results)
+            {
+                result.ItemProvider.LoadObject<UIImage>(ExtractImage);
+
+            }
+        }
+
+        //-----------------------------------------------------
+        // Extracts image.
+        //-----------------------------------------------------
+        private void ExtractImage(UIImage result, NSError error)
+        {
+            if (error == null)
+            {
+                source.SetResult(result);
+            }
+        }
+        #endregion
     }
 }
+#pragma warning restore CA1416 // Validate platform compatibility

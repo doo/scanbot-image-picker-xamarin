@@ -97,10 +97,6 @@
       <Project>{87F37852-6F6A-4A59-AD8D-6E77FDE638CB}</Project>
       <Name>Scanbot.ImagePicker.Test.Forms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\SDK.Forms\Scanbot.ImagePicker.Forms.Droid\Scanbot.ImagePicker.Forms.Droid.csproj">
-      <Project>{19F05575-B877-49C6-9299-6E8BA03B3F58}</Project>
-      <Name>Scanbot.ImagePicker.Forms.Droid</Name>
-    </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
