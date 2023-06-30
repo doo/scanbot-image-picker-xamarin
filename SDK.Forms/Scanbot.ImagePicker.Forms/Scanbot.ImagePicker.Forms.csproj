@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net7.0-ios;net7.0-android</TargetFrameworks>
+        <TargetFrameworks>net7.0;net7.0-ios;net7.0-android</TargetFrameworks>
         <RootNamespace>Scanbot.ImagePicker.Forms</RootNamespace>
         <UseMaui>true</UseMaui>
         <SingleProject>true</SingleProject>

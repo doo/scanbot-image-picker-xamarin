@@ -1,26 +1,32 @@
 <?xml version="1.0"?>
 <package>
-
-  <metadata>
-    <id>Scanbot.Xamarin.ImagePicker</id>
-    <version>0.0.2</version>
-    <authors>Scanbot</authors>
-    <owners>Scanbot</owners>
-    <projectUrl>https://github.com/doo/scanbot-image-picker-xamarin</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A tool to simplify and unify image picking from the gallery for Android and iOS. No more discrepancies between platforms, no more OnActivityResult, resultCode, FinishedPickingMedia. No messing with permissions, no launching controllers or starting activities – Pick &amp; Go! </description>
-    <copyright>Copyright 2020 doo GmbH</copyright>
-    <tags>Scanbot Image ImagePicker Xamarin Android iOS</tags>
-    <icon>images/icon.png</icon>
-    <license type="file">LICENSE.md</license>
-  </metadata>
-
-  <files>
-    <file src="../SDK/Scanbot.ImagePicker.Droid/bin/Release/Scanbot.ImagePicker.Droid.dll" target="lib/MonoAndroid81" />
-    <file src="../SDK/Scanbot.ImagePicker.iOS/bin/Release/Scanbot.ImagePicker.iOS.dll" target="lib/Xamarin.iOS10" />
-
-    <file src="../LICENSE.md" target="LICENSE.md" />
-    <file src="assets/icon.png" target="images/" />
-  </files>
-
+    <metadata>
+        <id>Scanbot.Xamarin.ImagePicker</id>
+        <version>1.0.0-local.2</version>
+        <authors>Scanbot</authors>
+        <owners>Scanbot</owners>
+        <projectUrl>https://github.com/doo/scanbot-image-picker-xamarin</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A tool to simplify and unify image picking from the gallery for Android and iOS. No more discrepancies between platforms, no more OnActivityResult, resultCode, FinishedPickingMedia. No messing with permissions, no launching controllers or starting activities – Pick &amp; Go! </description>
+        <copyright>Copyright 2020 doo GmbH</copyright>
+        <tags>Scanbot Image ImagePicker .NET Android iOS</tags>
+        <icon>images/icon.png</icon>
+        <license type="file">LICENSE.md</license>
+        <dependencies>
+            <group targetFramework="net7.0-android31.0" />
+            <group targetFramework="net7.0" />
+            <group targetFramework="net7.0-ios14.2" />
+            <group targetFramework="netstandard2" />
+            <group targetFramework="MonoAndroid81" />
+            <group targetFramework="Xamarin.iOS10" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="../SDK/Scanbot.ImagePicker.Droid/bin/Release/net7.0-android/Scanbot.ImagePicker.Droid.dll" target="lib/MonoAndroid81" />
+        <file src="../SDK/Scanbot.ImagePicker.iOS/bin/Release/net7.0-ios/Scanbot.ImagePicker.iOS.dll" target="lib/Xamarin.iOS10" />
+        <file src="../SDK/Scanbot.ImagePicker.Droid/bin/Release/net7.0-android/Scanbot.ImagePicker.Droid.dll" target="lib/net7.0-android31.0" />
+        <file src="../SDK/Scanbot.ImagePicker.iOS/bin/Release/net7.0-ios/Scanbot.ImagePicker.iOS.dll" target="lib/net7.0-ios14.2" />
+        <file src="../LICENSE.md" target="LICENSE.md" />
+        <file src="assets/icon.png" target="images/" />
+    </files>
 </package>

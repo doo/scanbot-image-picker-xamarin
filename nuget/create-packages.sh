@@ -2,14 +2,11 @@
 
 bash ../clean.sh
 
-nuget restore ../
+dotnet restore ../
 
-msbuild ../ImagePicker.sln /p:Configuration=Release /t:Clean \
-  /t:"SDK\\Scanbot_ImagePicker_Droid" \
-  /t:"SDK\\Scanbot_ImagePicker_iOS" \
-  /t:"SDK_Forms\\Scanbot_ImagePicker_Forms" \
-  /t:"SDK_Forms\\Scanbot_ImagePicker_Forms_Droid" \
-  /t:"SDK_Forms\\Scanbot_ImagePicker_Forms_iOS"
+dotnet build ../SDK/Scanbot.ImagePicker.Droid --configuration Release
+dotnet build ../SDK/Scanbot.ImagePicker.iOS --configuration Release
+dotnet build ../SDK.Forms/Scanbot.ImagePicker.Forms --configuration Release
 
 NUGET_DIST_TARGET_DIR="dist"
 
