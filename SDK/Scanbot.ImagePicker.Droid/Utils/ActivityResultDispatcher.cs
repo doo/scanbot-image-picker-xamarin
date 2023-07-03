@@ -1,7 +1,4 @@
-﻿using System;
-using System.Reflection;
-using System.Threading.Tasks;
-using Android.App;
+﻿using System.Reflection;
 using Android.Content;
 
 namespace Scanbot.ImagePicker.Droid.Utils

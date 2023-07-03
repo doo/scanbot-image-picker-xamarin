@@ -1,8 +1,4 @@
-﻿using System;
-using CoreGraphics;
-using UIKit;
-
-namespace ImagePicker.Test.iOS
+﻿namespace ImagePicker.Test.iOS
 {
     public class MainViewController : UIViewController
     {

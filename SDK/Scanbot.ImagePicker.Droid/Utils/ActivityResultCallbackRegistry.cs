@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Concurrent;
-using Android.App;
+﻿using System.Collections.Concurrent;
 using Android.Content;
 
 namespace Scanbot.ImagePicker.Droid.Utils
 {
-	// Copied from Xamarin.Forms repository (18 Feb 2020)
-	// https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ActivityResultCallbackRegistry.cs
-	public static class ActivityResultCallbackRegistry
+    // Copied from Xamarin.Forms repository (18 Feb 2020)
+    // https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ActivityResultCallbackRegistry.cs
+    public static class ActivityResultCallbackRegistry
 	{
 		static readonly ConcurrentDictionary<int, Action<Result, Intent>> s_activityResultCallbacks =
 			new ConcurrentDictionary<int, Action<Result, Intent>>();

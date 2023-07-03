@@ -1,7 +1,4 @@
-﻿using Foundation;
-using UIKit;
-
-namespace ImagePicker.Test.iOS
+﻿namespace ImagePicker.Test.iOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : UIResponder, IUIApplicationDelegate
