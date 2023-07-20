@@ -87,11 +87,9 @@ namespace Scanbot.ImagePicker.iOS
 
         internal Task<UIImage> PickImageNew()
         {
-
-            var config = new PHPickerConfiguration();
+            var config = new PHPickerConfiguration(Photos.PHPhotoLibrary.SharedPhotoLibrary);
             config.SelectionLimit = 1;
             config.Filter = PHPickerFilter.ImagesFilter;
-            config.Selection = PHPickerConfigurationSelection.Default;
             phPickerViewController = new PHPickerViewController(config);
             phPickerViewController.Delegate = this;
             source = new TaskCompletionSource<UIImage>();
