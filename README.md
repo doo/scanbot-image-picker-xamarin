@@ -34,13 +34,6 @@ Scanbot.ImagePicker.Forms.Droid.DependencyManager.Register();
 Scanbot.ImagePicker.Forms.iOS.DependencyManager.Register();
 ```
 
-### Roadmap
-
-* Format filter: **.jpg**, **.png**, **.pdf** etc.
-* Different sources: **camera**, **external storage directory**, **custom path** etc.
-* Various configuration options such as **min/max size**, **aspect ratio** etc.
-* Improved errorhandling (not just returning `null` when something goes wrong, heh)
-
 ### Contributing
 
 Contributions in the form of **issues**, **pull requests** and **suggestions** are very welcome. 
