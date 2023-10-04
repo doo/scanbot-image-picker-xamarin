@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Threading;
-using Android.App;
+﻿using System.Collections.Concurrent;
 using Android.Content;
-using Android.OS;
 using Android.Runtime;
 
 namespace Scanbot.ImagePicker.Droid.Utils

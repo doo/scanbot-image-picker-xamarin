@@ -1,5 +1,4 @@
-﻿using System;
-namespace Scanbot.ImagePicker.Droid.Utils
+﻿namespace Scanbot.ImagePicker.Droid.Utils
 {
     public class Platform
     {
