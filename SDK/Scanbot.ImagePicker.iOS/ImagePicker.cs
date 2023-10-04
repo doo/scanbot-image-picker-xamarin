@@ -1,12 +1,13 @@
-﻿using System.Globalization;
-using PhotosUI;
+﻿using PhotosUI;
 #pragma warning disable CA1416 // Validate platform compatibility
 namespace Scanbot.ImagePicker.iOS
 {
     public class ImagePicker : Foundation.NSObject, IPHPickerViewControllerDelegate
     {
-        public static readonly ImagePicker Instance = new ImagePicker();
+        private const string iOS_VERSION_14 = "14.0";
 
+        public static readonly ImagePicker Instance = new ImagePicker();
+        
         TaskCompletionSource<UIImage> source;
         UIImagePickerController imagePickerViewController;
         PHPickerViewController phPickerViewController;
@@ -18,8 +19,8 @@ namespace Scanbot.ImagePicker.iOS
         //-----------------------------------------
         public async Task<UIImage> PickImageAsync()
         {
-            var systemVersion = Convert.ToDouble(UIDevice.CurrentDevice.SystemVersion, CultureInfo.InvariantCulture);
-            if (systemVersion >= 14.0)
+           var result = UIDevice.CurrentDevice.SystemVersion.CompareTo(iOS_VERSION_14);
+            if (result > -1) // greater than or equal to iOS version 14.0  
             {
                 return await PickImageNew();
             }
